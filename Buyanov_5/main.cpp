@@ -10,15 +10,15 @@ int main()
 	cout << "Введите стоимость 1 кг продукта: ";
 	double price;
 	cin >> price;
-	for (double grams = 50; grams < 1000; grams += 50)
+	for (int grams = 50; grams < 1000; grams += 50)
 	{
-		double cost = grams / 1000 * price;
+		double cost = price * grams / 1000;
 		cout << grams << "г стоят " << cost << "р\n";
 	}
 
-	for (double grams = 1000; grams <= 10000; grams += 1000)
+	for (int grams = 1000; grams <= 10000; grams += 1000)
 	{
-		double cost = grams / 1000 * price;
+		double cost = price * grams / 1000;
 		cout << grams << "г стоят " << cost << "р\n";
 	}
 	system("pause");
